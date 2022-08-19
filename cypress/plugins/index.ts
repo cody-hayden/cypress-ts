@@ -22,9 +22,11 @@
   config: Cypress.ConfigOptions,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
 ): void | Cypress.ConfigOptions | Promise<Cypress.ConfigOptions> => {
-  return config;
+  
 };
 
-// TODO Import eyes-cypress here
+module.exports = plugins;
+require('@applitools/eyes-cypress')(module);
 
 export default plugins;
+
